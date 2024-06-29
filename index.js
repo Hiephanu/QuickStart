@@ -7,8 +7,8 @@ const { SourceTextModule } = require('vm')
 const program = new Command()
 
 program.version("0.0.1").description("A cli to open application when type name of aplication")
-const huhu = ()=> {
-  console.log("haha");
+const huhu =()=> {
+  console.log();
 }
 
 const getInstalledApplication = (callback) => {
