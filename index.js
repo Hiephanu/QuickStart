@@ -2,10 +2,14 @@
 const { exec } = require('child_process')
 const { Command } = require('commander')
 const { stderr } = require('process')
+const { SourceTextModule } = require('vm')
 
 const program = new Command()
 
-program.version("0.0.1").description("A cli to open application when type name of aplication")
+program.version("0.0.1").description("A cli to open application")
+const huhu =()=> {
+  console.log("Hu");
+}
 
 const getInstalledApplication = (callback) => {
     const command = `reg query "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall" /s /v "DisplayName"`
