@@ -6,10 +6,7 @@ const { SourceTextModule } = require('vm')
 
 const program = new Command()
 
-program.version("0.0.1").description("A cli to open application")
-const huhu =()=> {
-  console.log("Hu");
-}
+program.version("0.0.1").description("A cli to open application when type name of aplication")
 
 const getInstalledApplication = (callback) => {
     const command = `reg query "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall" /s /v "DisplayName"`
@@ -29,6 +26,7 @@ const getInstalledApplication = (callback) => {
         callback(aplications)
     })
 }
+
 program
   .arguments('<app-name>')
   .description('Quickstart an application by its name')
@@ -58,18 +56,6 @@ program
     });
   });
 
-program
-  .command('chrome')
-  .description('Open Google Chrome')
-  .action(() => {
-    exec('start chrome', (err) => {
-      if (err) {
-        console.error(`Error: ${err}`);
-      } else {
-        console.log('Google Chrome opened successfully.');
-      }
-    });
-  });
 
 
 program.parse(process.argv);
