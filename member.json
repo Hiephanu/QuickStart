@@ -1,0 +1,15 @@
+{
+    "id": "string",
+    "tenPhong": "string",
+    "loaiPhong": "string",
+    "dienTich": "number",
+    "soLuongBan": "number",
+    "coSoVatChat": {
+      "wifi": "boolean",
+      "mayChieu": "boolean",
+      "tuLanh": "boolean"
+    },
+    "ngayTao": "string",
+    "moTa": "string"
+  }
+  
