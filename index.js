@@ -8,7 +8,6 @@ const program = new Command()
 
 program.version("0.0.1").description("A cli to open application when type name of aplication")
 const huhu =()=> {
-  
 }
 const getInstalledApplication = (callback) => {
     const command = `reg query "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall" /s /v "DisplayName"`
